@@ -1,0 +1,7 @@
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\bin\Debug\ConsoleInventory.exe.config
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\bin\Debug\ConsoleInventory.exe
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\bin\Debug\ConsoleInventory.pdb
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\obj\Debug\ConsoleInventory.csprojAssemblyReference.cache
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\obj\Debug\ConsoleInventory.csproj.CoreCompileInputs.cache
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\obj\Debug\ConsoleInventory.exe
+C:\Users\toxim\source\repos\ConsoleInventory\ConsoleInventory\obj\Debug\ConsoleInventory.pdb
