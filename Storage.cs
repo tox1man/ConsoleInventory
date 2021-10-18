@@ -70,6 +70,10 @@ namespace ConsoleInventory
             Capacity = Items.Count;
         }
 
+        /// <summary>
+        /// Draws visible box containing all objects inside. Can be interactable.
+        /// </summary>
+        /// <param name="isInteractable"></param>
         public void DrawContent(bool isInteractable)
         {
             string drawString = "";
@@ -104,6 +108,12 @@ namespace ConsoleInventory
             }
         }
 
+        /// <summary>
+        /// Replaces random space characters inside Storage with symbol of the Item in it.
+        /// </summary>
+        /// <param name="furnitureString"></param>
+        /// <param name="items"></param>
+        /// <returns></returns>
         private string DrawItemsInside(string furnitureString, List<Item> items)
         {
             Random rnd = new Random();
@@ -120,12 +130,17 @@ namespace ConsoleInventory
             return furnitureString;
         }
 
+        /// <summary>
+        /// Shows interactable menu of the Storage object to choose Items you want to collect from it.
+        /// </summary>
         public void Interact()
         {
             Console.WriteLine($"You look inside a {Name}.");
             DrawContent(true);
 
             string input = Console.ReadLine();
+
+            // Regex to exclude non-number characters.
             Regex onlyDigitsRegEx = new Regex(@"\D");
             if (onlyDigitsRegEx.IsMatch(input) || input.Equals(""))
             {
@@ -158,6 +173,9 @@ namespace ConsoleInventory
             }
         }
 
+        /// <summary>
+        /// Writes a list of all items inside Storage object in a list.
+        /// </summary>
         public void LookInside()
         {
             string itemsString = "";

@@ -13,6 +13,10 @@ namespace ConsoleInventory
             Name = name;
             Furniture = furniture;
         }
+
+        /// <summary>
+        /// Shows interactable menu of the room.
+        /// </summary>
         public void Show()
         {
             Player.inventory.DrawContent(false);
@@ -27,7 +31,10 @@ namespace ConsoleInventory
             Console.WriteLine(output);
 
             string input = Console.ReadLine();
+            // Regex to exclude non-number characters.
             Regex onlyDigitsRegEx = new Regex(@"\D");
+
+            //Compare input to allowed characters.
             if (onlyDigitsRegEx.IsMatch(input) || input.Equals(""))
             {
                 Console.Clear();
@@ -37,6 +44,7 @@ namespace ConsoleInventory
             }
             else
             {
+                // Compare input to allowed number range.
                 int inputInt = Int32.Parse(input);
                 if (inputInt - 1 >= Furniture.Count || inputInt <= 0)
                 {
@@ -45,6 +53,8 @@ namespace ConsoleInventory
                     Show();
                     return;
                 }
+
+                // Interact with chosen element in the room.
                 Console.Clear();
                 Furniture[inputInt - 1].Interact();
                 Show();
